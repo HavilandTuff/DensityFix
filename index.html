@@ -53,16 +53,16 @@
             let x = parseFloat(document.getElementById('x').value);
             let a = parseFloat(document.getElementById('a').value);
             let c = parseFloat(document.getElementById('c').value);
-            let b = 1;  // b is fixed at 1
+            
 
             // Calculate y according to the function
-            if (x === b) {
+            if (x == 1) {
                 document.getElementById('result').innerText = "Error: Division by zero at x = " + b;
                 return;
             }
 
             let numerator = 1 - (x / a);
-            let denominator = (x / b) - 1;
+            let denominator = x - 1;
             let y = (numerator / denominator) * c;
 
             // Display the result
