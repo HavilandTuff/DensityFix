@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Density adjustment calculator Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Density adjustment Calculator</h1>
+    <form id="calculatorForm">
+        <label for="x">Enter target density:</label>
+        <input type="number" id="x" name="x" required><br>
+        
+        <label for="a">Enter density you have:</label>
+        <input type="number" id="a" name="a" required><br>
+        
+        <label for="c">Enter mass of glaze:</label>
+        <input type="number" id="c" name="c" required><br>
+        
+        <button type="button" onclick="calculateY()">Calculate</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script>
+        function calculateY() {
+            // Get user inputs
+            let x = parseFloat(document.getElementById('x').value);
+            let a = parseFloat(document.getElementById('a').value);
+            let c = parseFloat(document.getElementById('c').value);
+            let b = 1;  // b is fixed at 1
+
+            // Calculate y according to the function
+            if (x === b) {
+                document.getElementById('result').innerText = "Error: Division by zero at x = " + b;
+                return;
+            }
+
+            let numerator = 1 - (x / a);
+            let denominator = (x / b) - 1;
+            let y = (numerator / denominator) * c;
+
+            // Display the result
+            document.getElementById('result').innerText = "Add: " + y.toFixed(2) + " grams of water";
+        }
+    </script>
+</body>
+</html>
