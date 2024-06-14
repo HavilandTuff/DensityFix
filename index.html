@@ -25,19 +25,19 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-primary">Function Calculator</h1>
+        <h1 class="text-primary">Density Adjustment Calculator</h1>
         <form id="calculatorForm" class="mb-4">
             <div class="form-group">
-                <label for="x">Enter x:</label>
-                <input type="number" id="x" name="x" class="form-control" required>
+                <label for="x">Enter target density:</label>
+                <input type="number" id="x" name="x" class="form-control" required> g/cm<sup>3</sup>
             </div>
             <div class="form-group">
-                <label for="a">Enter a:</label>
-                <input type="number" id="a" name="a" class="form-control" required>
+                <label for="a">Enter desity you have:</label>
+                <input type="number" id="a" name="a" class="form-control" required> g/cm<sup>3</sup>
             </div>
             <div class="form-group">
-                <label for="c">Enter c:</label>
-                <input type="number" id="c" name="c" class="form-control" required>
+                <label for="c">Enter mass of glaze:</label>
+                <input type="number" id="c" name="c" class="form-control" required> g
             </div>
             <button type="button" class="btn btn-primary" onclick="calculateY()">Calculate</button>
         </form>
